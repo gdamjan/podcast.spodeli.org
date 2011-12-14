@@ -21,8 +21,8 @@ Next step is to build the static files with ``make build``, it will create the d
 Last, you deploy the static files in ``output`` to your server by using rsync with ``make deploy``.
 
 
-:: _podcast.spodeli.org: http://podcast.spodeli.org/
-:: _hyde: http://github.com/hyde/hyde
+.. _podcast.spodeli.org: http://podcast.spodeli.org/
+.. _hyde: http://github.com/hyde/hyde
 
 
 
