@@ -16,7 +16,8 @@ The site is generated with hyde_ and uses ?FIXME? to create the audio/video
 widgets. To install all, just run ``make get-deps``.
 
 Next step is to build the static files with ``make build``, it will create the directory
-``output``.
+``output``. You can run the ``make preprocess`` target to convert all of the audio files
+to the needed format and codec.
 
 Last, you deploy the static files in ``output`` to your server by using rsync with ``make deploy``.
 
@@ -29,10 +30,17 @@ Last, you deploy the static files in ``output`` to your server by using rsync wi
 Configuration
 =============
 
-hyde_ is configured in ``site.yaml``.
+hyde_ is configured in ``site.yaml``. See its documentation about what goes there.
 
-For deployment I use rsync over ssh. To configure rsync settings, you'll
-need to create a ``settings.mk`` file and specify the host, username and destination
+
+
+Deploy
+======
+
+Deployment is nothing short of putting the ``output`` directory on a public web server.
+
+For deployment I use rsync over ssh. To configure rsync settings, you'll need
+to create a ``settings.mk`` file and specify the host, username and destination
 directory for deploying. For example::
 
     DEPLOY_HOST = podcast.spodeli.org
