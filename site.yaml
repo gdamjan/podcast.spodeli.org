@@ -1,0 +1,36 @@
+mode: development # development or production
+
+context:
+    data:
+        site_title: podcast.spodeli.org
+        author:
+            name: podcaster
+            url: 'http://podcast.spodeli.org'
+        menu:
+            - title: Home
+              url: index.html
+            - title: About
+              url: about.html
+
+meta:
+    author: podcaster
+    nodemeta: meta.yaml
+    extends: base.j2
+    listable: true
+    default_block: article
+    created: !!timestamp '2011-01-01 00:00:00'
+
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.tagger.TaggerPlugin
+
+sorter:
+    time:
+        attr:
+            - meta.created
+        reverse: true
+        filters:
+            source.kind: html
+            meta.listable: true
