@@ -1,0 +1,12 @@
+{% macro render_excerpt(res, class=None) %}
+{% refer to res.url as article %}
+<a href="/projects/contact-case/diary/{{ (res.slug) }}" class="clearfix">
+<span class="block-link"></span>
+</a>
+<article class="clearfix diary-ex">
+<h3 class="diary-post-title">{{ res.meta.title }}</h3>
+<time class="diary-post-date" datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+{{ res.meta.created.strftime('%B %d, %Y') }}
+</time>
+</article>
+{% endmacro %}
