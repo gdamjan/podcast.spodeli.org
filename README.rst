@@ -3,16 +3,17 @@ podcast.spodeli.org
 ===================
 
 This is the setup of our podcast.spodeli.org_ site. The site is static html
-generated with hyde_, using html5 features for audio (with flash as a falback).
+generated with hyde_, using markdown for writing content, and html5 features
+for audio (with flash as a fallback).
 
 The build/publish system is based on a Makefile.
 
 
 
-Doit: Install, Build and Deploy
+Do-it: Install, Build and Deploy
 ===============================
 
-The site is generated with hyde_ and uses ?FIXME? to create the audio/video
+The site is generated with hyde_ 0.8 and uses html5media_ to create the audio/video
 widgets. To install all, just run ``make get-deps``.
 
 Next step is to build the static files with ``make build``, it will create the directory
@@ -24,7 +25,7 @@ Last, you deploy the static files in ``output`` to your server by using rsync wi
 
 .. _podcast.spodeli.org: http://podcast.spodeli.org/
 .. _hyde: http://github.com/hyde/hyde
-
+.. _html5media: http://html5media.info/
 
 
 Configuration
